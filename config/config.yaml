@@ -1,43 +1,45 @@
+# Configuration for the training pipeline
 training_pipeline_config:
-  pipeline_name: housing
-  artifact_dir: artifact
+  pipeline_name: housing  # Name of the pipeline
+  artifact_dir: artifact  # Directory to store pipeline artifacts
 
+# Configuration for data ingestion
 data_ingestion_config:
-  dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz
-  raw_data_dir: raw_data
-  tgz_download_dir: tgz_data
-  ingested_dir: ingested_data
-  ingested_train_dir: train
-  ingested_test_dir: test 
+  dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz  # URL to download the dataset
+  raw_data_dir: raw_data  # Directory to store raw data
+  tgz_download_dir: tgz_data  # Directory to store downloaded .tgz files
+  ingested_dir: ingested_data  # Directory for ingested data
+  ingested_train_dir: train  # Directory for preprocessed training data
+  ingested_test_dir: test   # Directory for preprocessed test data
 
-
-
-
+# Configuration for data validation
 data_validation_config:
-  schema_dir: config
-  schema_file_name: schema.yaml
-  report_file_name: report.json
-  report_page_file_name: report.html
+  schema_dir: config  # Directory containing schema files
+  schema_file_name: schema.yaml  # Name of the schema file
+  report_file_name: report.json  # Name of the report file
+  report_page_file_name: report.html  # Name of the report page file
 
+# Configuration for data transformation
 data_transformation_config:
-  add_bedroom_per_room: true
-  transformed_dir: transformed_data
-  transformed_train_dir: train
-  transformed_test_dir: test
-  preprocessing_dir: preprocessed
-  preprocessed_object_file_name: preprocessed.pkl
-  
+  add_bedroom_per_room: true  # Whether to add a feature indicating bedrooms per room
+  transformed_dir: transformed_data  # Directory for transformed data
+  transformed_train_dir: train  # Directory for transformed training data
+  transformed_test_dir: test   # Directory for transformed test data
+  preprocessing_dir: preprocessed  # Directory for preprocessed data
+  preprocessed_object_file_name: preprocessed.pkl  # Name of the preprocessed object file
+
+# Configuration for model training
 model_trainer_config:
-  trained_model_dir: trained_model
-  model_file_name: model.pkl
-  base_accuracy: 0.6
-  model_config_dir: config
-  model_config_file_name: model.yaml
+  trained_model_dir: trained_model  # Directory to store trained models
+  model_file_name: model.pkl  # Name of the model file
+  base_accuracy: 0.6  # Base accuracy used as a reference
+  model_config_dir: config  # Directory containing model configuration files
+  model_config_file_name: model.yaml  # Name of the model configuration file
 
-
+# Configuration for model evaluation
 model_evaluation_config:
-  model_evaluation_file_name: model_evaluation.yaml
-  
+  model_evaluation_file_name: model_evaluation.yaml  # Name of the model evaluation file
 
+# Configuration for model pushing
 model_pusher_config:
-  model_export_dir: saved_models
+  model_export_dir: saved_models  # Directory to export saved models

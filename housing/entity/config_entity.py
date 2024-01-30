@@ -40,4 +40,13 @@ ModelEvaluationConfig = namedtuple("ModelEvaluationConfig",
                                      "time_stamp"])                  # Time stamp indicating when the evaluation occurred
 
 
-ModelPusherConfig=namedtuple("ModelPusherConfig",["export_dir_path"])
+
+# This tuple encapsulates configuration parameters related to model pushing/exporting
+ModelPusherConfig = namedtuple("ModelPusherConfig",
+                                ["export_dir_path"])  # Directory path where the model will be exported/pushed
+
+
+
+# This tuple encapsulates configuration parameters related to the training pipeline
+TrainingPipelineConfig = namedtuple("TrainingPipelineConfig",
+                                     ["artifact_dir"])  # Directory path to store pipeline artifacts
