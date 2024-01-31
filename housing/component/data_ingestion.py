@@ -67,7 +67,7 @@ class DataIngestion:
         try:
             raw_data_dir=self.data_ingestion_config.raw_data_dir
 
-            file_name=os.listdir[raw_data_dir][0]
+            file_name=os.listdir(raw_data_dir)[0]
 
             housing_file_path=os.path.join(
                 raw_data_dir,
