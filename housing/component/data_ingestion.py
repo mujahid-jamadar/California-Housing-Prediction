@@ -65,6 +65,7 @@ class DataIngestion:
 
     def split_data_as_train_test(self):
         try:
+            
             raw_data_dir=self.data_ingestion_config.raw_data_dir
 
             file_name=os.listdir(raw_data_dir)[0]
@@ -138,4 +139,4 @@ class DataIngestion:
 
 
     def __del__(self):
-            logging.info(f"{'='*20}Data Ingestion log")
+            logging.info(f"{'='*20}Data Ingestion log{'='*20}")
