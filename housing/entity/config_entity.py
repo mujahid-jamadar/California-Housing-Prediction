@@ -13,7 +13,7 @@ DataIngestionConfig = namedtuple("DataIngestionConfig",
 
 # This tuple encapsulates configuration parameters related to data validation
 DataValidationConfig = namedtuple("DataValidationConfig",
-                                   ["schema_file_path"])  # File path of the schema used for data validation
+                                   ["schema_file_path","report_file_path","report_page_file_path"])  # File path of the schema used for data validation
 
 
 # This tuple encapsulates configuration parameters related to data transformation and preprocessing
@@ -29,8 +29,7 @@ DataTransformationConfig = namedtuple("DataTransformationConfig",
 
 # This tuple encapsulates configuration parameters related to model training
 ModelTrainerConfig = namedtuple("ModelTrainerConfig",
-                                 ["trained_model_file_path",  # File path where the trained model will be saved
-                                  "base_accuracy"])           # Base accuracy used as a reference for model evaluation
+                                 ["trained_model_file_path","base_accuracy","model_config_file_path"])           # Base accuracy used as a reference for model evaluation
 
 
 
