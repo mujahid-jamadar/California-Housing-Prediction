@@ -78,6 +78,8 @@ class Configuration:
             )
             # Extract information from configuration
             data_validation_config = self.config_info[DATA_VALIDATION_CONFIG_KEY]
+            
+            #Get schema file path
             schema_file_path = os.path.join(ROOT_DIR,
                                             data_validation_config[DATA_VALIDATION_SCHEMA_DIR_KEY],
                                             data_validation_config[DATA_VALIDATION_SCHEMA_FILE_NAME_KEY]
