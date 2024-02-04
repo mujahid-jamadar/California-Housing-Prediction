@@ -50,6 +50,7 @@ class DataValidation:
             if not is_available:
                 train_file_path=self.data_ingestion_artifact.train_file_path
                 test_file_path=self.data_ingestion_artifact.test_file_path
+                
 
                 message=f" Training file: {train_file_path} or Testing file :{test_file_path} is not available"
                 logging.info(message)
@@ -88,7 +89,7 @@ class DataValidation:
 
                 # Check if categorical columns have valid domain values
                 for column in predefined_schema["categorical_columns"]:
-                    if not set(data[column].unique()).issubset(predefined_schema["domain_values"][column]):
+                    if not set(data[column].unique()).issubset(predefined_schema["domain_value"][column]):
                         return False
 
                 # Check if target column is present
@@ -101,7 +102,7 @@ class DataValidation:
             is_train_valid = validate_individual_dataset(train_df)
             is_test_valid = validate_individual_dataset(test_df)
             validate_status= is_train_valid and is_test_valid
-            validate_status=True
+            #validate_status=True
             #if not validate_status:
                 #raise Exception(f"Schema validate for test and train Fail")
             
