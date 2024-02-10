@@ -2,7 +2,7 @@ from housing.exception import HousingException
 from housing.entity.config_entity import DataValidationConfig
 from housing.logger import logging
 import os,sys
-from housing.entity.artifact_entity import DatIngestionArtifact,DataValidationArtifact
+from housing.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact
 import pandas as pd
 from housing.constant import *
 from housing.util.util import *
@@ -24,7 +24,7 @@ import json
 class DataValidation:
     
     def __init__(self,data_validation_config:DataValidationConfig,
-                 data_ingestion_artifact:DatIngestionArtifact):
+                 data_ingestion_artifact:DataIngestionArtifact):
         try:
             logging.info(f"{'>>'*30}Data Valdaition log started.{'<<'*30} \n\n")
             self.data_validation_config=data_validation_config

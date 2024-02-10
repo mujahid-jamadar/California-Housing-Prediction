@@ -2,7 +2,7 @@ from housing.exception import HousingException
 from housing.entity.config_entity import DataIngestionConfig
 from housing.logger import logging
 import os,sys
-from housing.entity.artifact_entity import DatIngestionArtifact
+from housing.entity.artifact_entity import DataIngestionArtifact
 import tarfile
 from six.moves import urllib
 import pandas as pd
@@ -112,7 +112,7 @@ class DataIngestion:
                 logging.info(f"Exporting testing dataset to file : {test_file_path}")
                 strat_test_set.to_csv(test_file_path,index=False)
 
-            data_ingestion_artifact=DatIngestionArtifact(
+            data_ingestion_artifact=DataIngestionArtifact(
                 train_file_path=train_file_path,
                 test_file_path=test_file_path,
                 is_ingested=True,
