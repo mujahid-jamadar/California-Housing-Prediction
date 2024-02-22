@@ -1,6 +1,10 @@
 import os
 from datetime import datetime
-ROOT_DIR=os.getcwd()            # To get current working directory
+ROOT_DIR=os.getcwd()   
+
+
+def get_current_time_stamp():
+    return f"{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}"         # To get current working directory
 
 CONFIG_DIR="config"
 CONFIG_FILE_NAME="config.yaml"
@@ -8,6 +12,7 @@ CONFIG_SCHEMA_FILE_NAME="schema.yaml"
 CONFIG_FILE_PATH=os.path.join(ROOT_DIR,CONFIG_DIR,CONFIG_FILE_NAME)
 
 CURRENT_TIME_STAMP=f"{datetime.now().strftime('%y-%m-%d-%H-%M-%S')}"
+
 
 
 #Training pipeline related variable
@@ -80,3 +85,11 @@ MODEL_EVALUATION_ARTIFACT_DIR = "model_evaluation"
 # Model Pusher config key
 MODEL_PUSHER_CONFIG_KEY = "model_pusher_config"
 MODEL_PUSHER_MODEL_EXPORT_DIR_KEY = "model_export_dir"
+
+
+BEST_MODEL_KEY = "best_model"
+HISTORY_KEY = "history"
+MODEL_PATH_KEY = "model_path"
+
+EXPERIMENT_DIR_NAME="experiment"
+EXPERIMENT_FILE_NAME="experiment.csv"
