@@ -1,7 +1,7 @@
 # Your workflow name.
 name: Deploy to heroku.
 
-# Run workflow on every push to main branch.
+# Run workflow on every push to the main  branch.
 on:
   push:
     branches: [main]
