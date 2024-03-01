@@ -1,6 +1,6 @@
 # **Machine-Learning-project-end-to-end**
 
-
+[Application url](https://housing-price-california-42304ebabb60.herokuapp.com/)
 
 **About this file :**
 
@@ -73,9 +73,7 @@ CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
 
 
 
-### Render app 
 
-- since heroku is not availabe iam using render app
 
 
 
