@@ -8,7 +8,7 @@
 
 **Target variable** : Median House Value( Continious)
 
-Model : 'Supervised Regression Model'
+Model : 'RandomForestRegressor Model'
 
 1. **longitude:** A measure of how far west a house is; a higher value is farther west
 2. **latitude:** A measure of how far north a house is; a higher value is farther north
