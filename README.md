@@ -36,11 +36,10 @@ The data contains information from the 1990 California census. So although it ma
 
 1. Github
 
-2. Heroku or render
+2. Heroku  
 
-3. cloud(AWS, GCP, Azure)
+3. pycharm or vs code
 
-4. pycharm or vs code
 
 
 ### create environment
