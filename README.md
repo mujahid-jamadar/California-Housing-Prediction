@@ -1,6 +1,10 @@
 # **Machine-Learning-project-end-to-end**
 
 [Application url](https://housing-price-california-42304ebabb60.herokuapp.com/)
+![image](https://github.com/user-attachments/assets/1ec24f82-cc29-46df-9243-af3d46e97704)
+![image](https://github.com/user-attachments/assets/ea62dc20-aea5-44ec-a948-ed9629a2865e)
+
+
 
 **About this file :**
 
